@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Route } from '@angular/router';
 
 const routes: Route[] = [
+  //standalone components don't need modules
   {
     path: '',
     loadComponent: () =>
