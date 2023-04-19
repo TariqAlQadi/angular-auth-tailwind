@@ -12,8 +12,9 @@ import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 export class LoginComponent {
   constructor(private fb: FormBuilder) {}
 
-  form = this.fb.nonNullable.group({
+  loginForm = this.fb.nonNullable.group({
     email: ['', [Validators.required, Validators.email]],
+    password: ['', [Validators.required, Validators.minLength(6)]],
   });
 
   onSubmit() {}
