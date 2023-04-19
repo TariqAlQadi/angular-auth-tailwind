@@ -13,11 +13,15 @@ export class LoginComponent {
   constructor(private fb: FormBuilder) {}
 
   loginForm = this.fb.nonNullable.group({
-    email: ['', [Validators.required, Validators.email]],
-    password: ['', [Validators.required, Validators.minLength(6)]],
+    email: ['abc@def', [Validators.required, Validators.email]],
+    password: ['1234', [Validators.required, Validators.minLength(6)]],
   });
 
-  onSubmit() {}
+  onSubmit() {
+    console.log(this.loginForm.value);
+  }
 
-  createAccount() {}
+  createAccount() {
+    console.log(this.loginForm.value);
+  }
 }

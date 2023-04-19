@@ -20,9 +20,7 @@
       [formGroup]="loginForm"
     >
       <div>
-        <label for="email-address" class="sr-only"
-          >Email<!-- sr-only = "Screenreader only" -->
-        </label>
+        <label for="email-address" class="sr-only"></label>
         <input
           type="email"
           id="email-address"
@@ -33,7 +31,6 @@
           class="relative bloc w-full appearance-none rounded-none"
           placeholder="Email"
         />
-        <!-- only using placeholder, because no readable label -->
       </div>
       <div>
         <label for="password" class="sr-only"></label>
@@ -45,9 +42,11 @@
           autocomplete="password"
           required
           placeholder="Password"
-          class="relative bloc w-full appearance-none rounded-none rounded-t-md border border-gray-300 px-3 py-2 text-gray-900 focus:z-10 focus:border-indigo-500"
+          class="relative bloc w-full appearance-none rounded-none"
         />
       </div>
+      <button type="button" (click)="createAccount()">Create Account</button>
+      <button>Sign In</button>
     </form>
 
     <!-- BUTTONS -->
